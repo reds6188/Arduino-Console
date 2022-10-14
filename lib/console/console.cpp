@@ -3,6 +3,11 @@
 Console::Console(void) {
 	Serial.begin(115200);
 	Serial.println();
+	this->max_tag_length = TAG_MAX_LENGTH;
+}
+
+void Console::setTagLength(uint8_t length) {
+	this->max_tag_length = length;
 }
 
 void Console::line(style_t style, uint8_t length, bool newLine) {
@@ -44,7 +49,7 @@ void Console::header(String title, style_t style, uint8_t length) {
 }
 
 void Console::log(String tag, String message) {
-	uint8_t num_spaces = TAG_MAX_LENGTH - tag.length();
+	uint8_t num_spaces = this->max_tag_length - tag.length();
 	String pad_str;
 	for(uint8_t i=0 ; i<num_spaces ; i++)
 		pad_str += " ";

@@ -9,6 +9,7 @@ void setup() {
 	console.log(MAIN_T, "ESP32 Chip Model: " + String(ESP.getChipModel()));
 	console.log(MAIN_T, "ESP32 Flash Size: " + String(ESP.getFlashChipSize()));
 	console.header("END INITIALIZATION", HASH, 40);
+	console.setTagLength(12);
 }
 
 void loop() {
