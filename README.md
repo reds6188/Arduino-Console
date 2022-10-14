@@ -4,7 +4,7 @@ Evoluzione del monitor seriale di Arduino `Serial.print` che adotta una sintassi
 
 Autore: **Daniele Rossi**
 
-Versione: **1.0.0 (13-Ott-2022)**
+Versione: **1.1.0 (14-Ott-2022)**
 
 ## Costruttore di Classe
 
@@ -38,8 +38,13 @@ Stampa una riga di testo `messsage` utilizzando la stringa `tag` come prefisso (
 
 I tag hanno lunghezza massima di 6 caratteri, alcuni tag standard sono disponiili nell'omonimo file H.
 
+### `setTagLength(uint8_t length)`
+
+Imposta la lunghezza `length` massima per i tag.
+
 > `[ TAG    ] Messaggio`
 
 ## Cronologia Versioni
 
 - `1.0.0` (13-Ott-2022) - Versione iniziale
+- `1.1.0` (14-Ott-2022) - Aggiunto il metodo `setTagLength`
